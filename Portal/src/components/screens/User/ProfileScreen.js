@@ -2,13 +2,13 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, Alert } from 'react-native';
 
 // Import the profile image from the assets folder
-import ProfileImage from '../../../../images/sccthrewurcloths-lozge7.jpeg'; // Adjust the path to match the location of your image file
+import ProfileImage from '../../../../assets/icon.png'; // Adjust the path to match the location of your image file
 
-const AdminProfileScreen = ({ navigation }) => {
+const ProfileScreen = ({ navigation }) => {
   // Sample user data (replace with actual user data)
   const user = {
-    name: 'Admin',
-    email: 'admin@szabist.pk',
+    name: 'Other User',
+    email: 'helpdesk@sib.com.pk',
   };
 
   const handleLogout = () => {
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#1F184C',
   },
   profileImage: {
     width: 150,
@@ -69,21 +70,23 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
+    color:'white'
   },
   email: {
     fontSize: 16,
     marginBottom: 20,
+    color:'white',
   },
   logoutButton: {
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
   },
   logoutButtonText: {
-    color: '#fff',
+    color: 'black',
     fontSize: 16,
   },
 });
 
-export default AdminProfileScreen;
+export default ProfileScreen;

@@ -2,12 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Welcome from './src/components/screens/Welcome';
-import Login from './src/components/screens/Login';
-import Signup from './src/components/screens/Signup';
-import MainScreen from './src/components/screens/MainScreen';
+import Welcome from './src/components/screens/User/Welcome';
+import Login from './src/components/screens/User/Login';
+//import Signup from './src/components/screens/Signup';
+import MainScreen from './src/components/screens/User/MainScreen';
 // import Admin from './src/components/screens/Admin';
-import Dashboard from './src/components/screens/Dashboard';
+import Dashboard from './src/components/screens/User/Dashboard';
 
 
 const Stack = createNativeStackNavigator();
@@ -24,22 +24,22 @@ export default function App() {
         <Stack.Screen 
           name='Login'
           component={Login}
-          options={{title:'Login'}}/>
+          options={{headerShown:false}}/>
           <Stack.Screen 
           name='MainScreen'
           component={MainScreen}
           options={{headerShown:false}}/>
-        <Stack.Screen 
+        {/* <Stack.Screen 
           name='Signup'
           component={Signup}
-          options={{title:'Register'}}/>
+          options={{title:'Register'}}/> */}
           <Stack.Screen 
           name='Dashboard'
           component={Dashboard}
           options={{headerShown:false}}/>
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar style="auto" /> 
+      <StatusBar style="light" /> 
     </View>
   );
 }

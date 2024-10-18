@@ -2,13 +2,13 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, Alert } from 'react-native';
 
 // Import the profile image from the assets folder
-import ProfileImage from '../../../images/sccthrewurcloths-lozge7.jpeg'; // Adjust the path to match the location of your image file
+//import ProfileImage from '../'; // Adjust the path to match the location of your image file
 
-const ProfileScreen = ({ navigation }) => {
+const AdminProfileScreen = ({ navigation }) => {
   // Sample user data (replace with actual user data)
   const user = {
-    name: 'Ahil Arif',
-    email: 'bscs2012372@szabist.pk',
+    name: 'IT',
+    email: 'helpdesk@sib.com.pk',
   };
 
   const handleLogout = () => {
@@ -37,7 +37,7 @@ const ProfileScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/* Display the profile image from the local folder */}
-      <Image source={ProfileImage} style={styles.profileImage} />
+      {/* <Image source={ProfileImage} style={styles.profileImage} /> */}
 
       {/* User name */}
       <Text style={styles.name}>{user.name}</Text>
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#1F184C',
   },
   profileImage: {
     width: 150,
@@ -69,21 +70,23 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
+    color:'white'
   },
   email: {
     fontSize: 16,
     marginBottom: 20,
+    color:'white',
   },
   logoutButton: {
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
   },
   logoutButtonText: {
-    color: '#fff',
+    color: 'black',
     fontSize: 16,
   },
 });
 
-export default ProfileScreen;
+export default AdminProfileScreen;

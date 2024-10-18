@@ -7,9 +7,9 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/download.png",
+      "image": "./assets/SIBtext.jpg",
       "resizeMode": "contain",
-      "backgroundColor": "#2d358a"
+      "backgroundColor": "#1F184C"
     },
     "assetBundlePatterns": [
       "**/*"
